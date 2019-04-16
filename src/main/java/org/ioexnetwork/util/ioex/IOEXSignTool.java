@@ -4,12 +4,12 @@
  * Distributed under the MIT software license, see the accompanying file
  * LICENSE or https://opensource.org/licenses/mit-license.php
  */
-package org.elastos.util.ela;
+package org.ioexnetwork.util.ioex;
 
 
-import org.elastos.ela.ECKey;
-import org.elastos.ela.SignTool;
-import org.elastos.ela.bitcoinj.Sha256Hash;
+import org.ioexnetwork.ioex.ECKey;
+import org.ioexnetwork.ioex.SignTool;
+import org.ioexnetwork.ioex.bitcoinj.Sha256Hash;
 import org.spongycastle.asn1.sec.SECNamedCurves;
 import org.spongycastle.asn1.x9.X9ECParameters;
 import org.spongycastle.crypto.digests.SHA256Digest;
@@ -19,12 +19,8 @@ import org.spongycastle.crypto.signers.HMacDSAKCalculator;
 
 import java.math.BigInteger;
 
-/**
- * clark
- * <p>
- * 9/26/18
- */
-public class ElaSignTool extends SignTool {
+
+public class IOEXSignTool extends SignTool {
 
     private static final String CURVE_ALGO = "secp256r1";
 

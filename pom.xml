@@ -4,7 +4,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.elastos</groupId>
+  <groupId>org.ioexnetwork</groupId>
   <artifactId>wallet.lib</artifactId>
   <version>0.0.6</version>
 
@@ -26,9 +26,9 @@
     </developer>
   </developers>
   <scm>
-    <connection>scm:git:git://github.com/elastos/Elastos.ORG.Wallet.Lib.Java.git</connection>
-    <developerConnection>scm:git:ssh://github.com/elastos/Elastos.ORG.Wallet.Lib.Java.git</developerConnection>
-    <url>http://github.com/elastos/Elastos.ORG.Wallet.Lib.Java/tree/master</url>
+    <connection>scm:git:git://github.com/ioeXNetwork/ioeX.SDK.Keypair.Java.git</connection>
+    <developerConnection>scm:git:ssh://github.com/ioeXNetwork/ioeX.SDK.Keypair.Java.git</developerConnection>
+    <url>http://github.com/ioeXNetwork/ioeX.SDK.Keypair.Java/tree/master</url>
   </scm>
   <distributionManagement>
     <snapshotRepository>

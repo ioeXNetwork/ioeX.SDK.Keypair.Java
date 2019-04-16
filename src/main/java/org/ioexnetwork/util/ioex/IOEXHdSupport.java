@@ -4,7 +4,7 @@
  * Distributed under the MIT software license, see the accompanying file
  * LICENSE or https://opensource.org/licenses/mit-license.php
  */
-package org.elastos.util.ela;
+package org.ioexnetwork.util.ioex;
 
 import io.github.novacrypto.bip32.ExtendedPrivateKey;
 import io.github.novacrypto.bip44.AddressIndex;
@@ -13,8 +13,8 @@ import io.github.novacrypto.bip44.Change;
 import io.github.novacrypto.hashing.Sha256;
 import io.github.novacrypto.toruntime.CheckedExceptionToRuntime;
 import org.apache.commons.codec.binary.Hex;
-import org.elastos.ela.Ela;
-import org.elastos.entity.MnemonicType;
+import org.ioexnetwork.ioex.ioeX;
+import org.ioexnetwork.entity.MnemonicType;
 import org.web3j.crypto.CipherException;
 
 import javax.crypto.SecretKeyFactory;
@@ -29,12 +29,8 @@ import java.util.UUID;
 
 import static io.github.novacrypto.toruntime.CheckedExceptionToRuntime.toRuntime;
 
-/**
- * clark
- * <p>
- * 10/17/18
- */
-public class ElaHdSupport {
+
+public class IOEXHdSupport {
 
     private static final String[] dict =
             {"0000", "0001", "0010", "0011", "0100", "0101", "0110", "0111", "1000",
@@ -86,7 +82,7 @@ public class ElaHdSupport {
 
     private static String findFilePath(String fileName){
 
-        URL url = ElaHdSupport.class.getClassLoader().getResource(fileName);
+        URL url = IOEXHdSupport.class.getClassLoader().getResource(fileName);
         if (url != null){
             return url.getPath();
         }
@@ -96,7 +92,7 @@ public class ElaHdSupport {
     private static void readTextFile(String fileName) {
         try {
             String encoding = "utf-8";
-            InputStream is = ElaHdSupport.class.getClassLoader().getResourceAsStream(fileName);
+            InputStream is = IOEXHdSupport.class.getClassLoader().getResourceAsStream(fileName);
             if (is != null) { //判断文件是否存在
                 InputStreamReader read = new InputStreamReader(
                         is, encoding);//考虑到编码格式
@@ -131,8 +127,8 @@ public class ElaHdSupport {
      */
     private static String genAddress(ExtendedPrivateKey childPrivateKey) {
         String privateKey = childPrivateKey.getPrivKey();
-        String publicKey  = Ela.getPublicFromPrivate(privateKey);
-        String publicAddr = Ela.getAddressFromPrivate(privateKey);
+        String publicKey  = ioeX.getPublicFromPrivate(privateKey);
+        String publicAddr = ioeX.getAddressFromPrivate(privateKey);
         return "{\"privateKey\":\""+privateKey+"\",\"publicKey\":\""+publicKey+"\",\"publicAddress\":\""+publicAddr+"\"}";
     }
 

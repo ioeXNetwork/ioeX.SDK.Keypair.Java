@@ -4,33 +4,33 @@
  * Distributed under the MIT software license, see the accompanying file
  * LICENSE or https://opensource.org/licenses/mit-license.php
  */
-package org.elastos.exception;
+package org.ioexnetwork.exception;
 
-public class ApiRequestDataException extends RuntimeException{
-
+public class ApiInternalException extends RuntimeException {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
-    public ApiRequestDataException() {
+    public ApiInternalException() {
         super();
     }
-    public ApiRequestDataException(String message) {
+    public ApiInternalException(String message) {
         super(message);
     }
     
-    public ApiRequestDataException(String message, Throwable cause) {
+    public ApiInternalException(String message, Throwable cause) {
         super(message, cause);
     }
 
-    public ApiRequestDataException(Throwable cause) {
+    public ApiInternalException(Throwable cause) {
         super(cause);
     }
 
-    protected ApiRequestDataException(String message, Throwable cause,
+    protected ApiInternalException(String message, Throwable cause,
                                boolean enableSuppression,
                                boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
     }
+
 }

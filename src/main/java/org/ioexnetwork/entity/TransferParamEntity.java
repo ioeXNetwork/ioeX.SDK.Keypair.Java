@@ -1,12 +1,8 @@
-package org.elastos.entity;
+package org.ioexnetwork.entity;
 
 import java.util.List;
 
-/**
- * 
- * @author clark
- * May 23, 2018 10:48:16 AM
- */
+
 public class TransferParamEntity<T,V,M> {
 	private V sender;
 	private String memo;

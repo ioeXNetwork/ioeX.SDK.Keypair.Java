@@ -1,4 +1,4 @@
-package org.elastos.entity;
+package org.ioexnetwork.entity;
 
 public enum ChainType {
 

@@ -4,13 +4,10 @@
  * Distributed under the MIT software license, see the accompanying file
  * LICENSE or https://opensource.org/licenses/mit-license.php
  */
-package org.elastos.util;
+package org.ioexnetwork.util;
 import java.security.MessageDigest;
 import java.security.SecureRandom;
-/**
- * clark
- * 2018-09-04
- */
+
 public class HashKit {
     public static final long FNV_OFFSET_BASIS_64 = -3750763034362895579L;
     public static final long FNV_PRIME_64 = 1099511628211L;

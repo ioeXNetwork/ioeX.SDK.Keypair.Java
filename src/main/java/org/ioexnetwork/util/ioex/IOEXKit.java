@@ -4,14 +4,14 @@
  * Distributed under the MIT software license, see the accompanying file
  * LICENSE or https://opensource.org/licenses/mit-license.php
  */
-package org.elastos.util.ela;
+package org.ioexnetwork.util.ioex;
 
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
-import org.elastos.api.Basic;
-import org.elastos.common.ErrorCode;
-import org.elastos.ela.*;
-import org.elastos.util.JsonUtil;
+import org.ioexnetwork.api.Basic;
+import org.ioexnetwork.common.ErrorCode;
+import org.ioexnetwork.ioex.*;
+import org.ioexnetwork.util.JsonUtil;
 
 import javax.xml.bind.DatatypeConverter;
 import java.util.LinkedHashMap;
@@ -21,7 +21,7 @@ import java.util.LinkedHashMap;
  * <p>
  * 9/27/18
  */
-public class ElaKit {
+public class IOEXKit {
 
     public static String genRawTransaction(JSONObject inputsAddOutpus) {
         try {
@@ -35,7 +35,7 @@ public class ElaKit {
             if(json_transaction.has("Payload")){
                 payload = JsonUtil.jsonStr2Entity(json_transaction.getString("Payload"),PayloadRegisterIdentification.class);
                 String privKey = payload.getIdPrivKey();
-                String address = Ela.getAddressFromPrivate(privKey);
+                String address = ioeX.getAddressFromPrivate(privKey);
                 String programHash = DatatypeConverter.printHexBinary(Util.ToScriptHash(address));
                 payload.setProgramHash(programHash);
             }
@@ -47,12 +47,12 @@ public class ElaKit {
             } else {
                 RawTx rawTx;
                 if (payload == null && bool == false) {
-                    rawTx = Ela.makeAndSignTx(utxoTxInputs, txOutputs);
+                    rawTx = ioeX.makeAndSignTx(utxoTxInputs, txOutputs);
                 } else if (bool ) {
                     String memo = json_transaction.getString("Memo");
-                    rawTx = Ela.makeAndSignTx(utxoTxInputs, txOutputs, memo);
+                    rawTx = ioeX.makeAndSignTx(utxoTxInputs, txOutputs, memo);
                 } else {
-                    rawTx = Ela.makeAndSignTx(utxoTxInputs, txOutputs, payload);
+                    rawTx = ioeX.makeAndSignTx(utxoTxInputs, txOutputs, payload);
                 }
 
                 resultMap.put("rawTx", rawTx.getRawTxString());

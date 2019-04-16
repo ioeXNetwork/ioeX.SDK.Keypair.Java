@@ -4,7 +4,7 @@
  * Distributed under the MIT software license, see the accompanying file
  * LICENSE or https://opensource.org/licenses/mit-license.php
  */
-package org.elastos.util;
+package org.ioexnetwork.util;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -13,16 +13,11 @@ import com.google.gson.Gson;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONException;
 import net.sf.json.JSONObject;
-import org.elastos.exception.ApiRequestDataException;
+import org.ioexnetwork.exception.ApiRequestDataException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * 
- * @author clark
- * 
- * Apr 25, 2018 12:09:11 PM
- */
+
 public class JsonUtil {
 
 	private static Logger logger = LoggerFactory.getLogger(JsonUtil.class);

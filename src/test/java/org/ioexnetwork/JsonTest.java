@@ -4,22 +4,17 @@
  * Distributed under the MIT software license, see the accompanying file
  * LICENSE or https://opensource.org/licenses/mit-license.php
  */
-package org.elastos;
+package org.ioexnetwork;
 
-import org.elastos.ela.Ela;
-import org.elastos.ela.PayloadRegisterIdentification;
-import org.elastos.ela.Util;
-import org.elastos.ela.bitcoinj.Base58;
-import org.elastos.util.JsonUtil;
+import org.ioexnetwork.ioex.ioeX;
+import org.ioexnetwork.ioex.PayloadRegisterIdentification;
+import org.ioexnetwork.ioex.Util;
+import org.ioexnetwork.ioex.bitcoinj.Base58;
+import org.ioexnetwork.util.JsonUtil;
 import org.junit.Test;
 
 import javax.xml.bind.DatatypeConverter;
 
-/**
- * clark
- * <p>
- * 10/13/18
- */
 public class JsonTest {
 
 
@@ -53,7 +48,7 @@ public class JsonTest {
         PayloadRegisterIdentification payload = null;
             payload = JsonUtil.jsonStr2Entity(payloadStr,PayloadRegisterIdentification.class);
             String privKey = payload.getIdPrivKey();
-            String address = Ela.getAddressFromPrivate(privKey);
+            String address = ioeX.getAddressFromPrivate(privKey);
             String programHash = DatatypeConverter.printHexBinary(Util.ToScriptHash(address));
             payload.setProgramHash(programHash);
         System.out.println(1);
