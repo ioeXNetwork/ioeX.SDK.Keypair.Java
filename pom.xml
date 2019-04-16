@@ -10,7 +10,7 @@
 
   <name>wallet.lib</name>
   <description>wallet library</description>
-  <url>http://www.elastos.org</url>
+  <url>http://www.ioex.vip</url>
   <licenses>
     <license>
       <name>MIT License</name>
@@ -21,8 +21,8 @@
     <developer>
       <name>huangxiaoming</name>
       <email>huangxiaoming@elastos.com</email>
-      <organization>elastos</organization>
-      <organizationUrl>http://www.elastos.org</organizationUrl>
+      <organization>ioexnetwork</organization>
+      <organizationUrl>http://www.ioex.vip</organizationUrl>
     </developer>
   </developers>
   <scm>

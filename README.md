@@ -6,7 +6,7 @@ Create a basic `Maven` project
 
 ```xml
 <dependency>
-    <groupId>org.elastos</groupId>
+    <groupId>org.ioexnetwork</groupId>
     <artifactId>wallet.lib</artifactId>
     <version>0.0.2</version>
 </dependency>
@@ -15,5 +15,5 @@ Create a basic `Maven` project
 or `Gradle`:
 
 ```sh
-compile 'org.elastos:wallet.lib:0.0.2'
+compile 'org.ioexnetwork:wallet.lib:0.0.2'
 ```
